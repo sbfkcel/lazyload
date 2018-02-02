@@ -20,7 +20,7 @@ module.exports = {
     imgList1:[
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621700.jpg",
         //"https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621698.jpg",
-        "http://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/VaNtWRbmebdlBCq.gif",
+        "https://sbfkcel.github.io/lazyload/images/5.gif",
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621687.jpg",
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621683.jpg",
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621681.jpg",
@@ -40,7 +40,7 @@ module.exports = {
     ],
     coverList1:[
         "",
-        "http://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/JEOMkQbmebdirhB.jpg!a-3-540x.jpg",
+        "https://sbfkcel.github.io/lazyload/images/5cover.jpg",
         "",
         "",
         "",
