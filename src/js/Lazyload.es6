@@ -55,6 +55,7 @@ export default class Lazyload {
         (task = () => {
             //得到当前屏幕区域的需要更新图片列表
             let eList = _ts.getShowList();
+            console.log(eList)
 
             //遍历加载图片
             for(let i=0,len=eList.length; i<len; i++){
@@ -181,8 +182,8 @@ export default class Lazyload {
         let d = {
             // x: window.scrollX || document.compatMode == "BackCompat" ? document.body.scrollLeft : document.documentElement.scrollLeft,
             // y: window.scrollY || document.compatMode == "BackCompat" ? document.body.scrollTop : document.documentElement.scrollTop
-            x: document.compatMode == "BackCompat" ? document.body.scrollLeft : document.documentElement.scrollLeft,
-            y: document.compatMode == "BackCompat" ? document.body.scrollTop : document.documentElement.scrollTop
+            x: window.scrollX || document.documentElement.scrollLeft || window.pageXOffset || document.body.scrollLeft,
+            y: window.scrollY || document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
         };
 
         return d;
@@ -297,8 +298,8 @@ export default class Lazyload {
                 yt = top + height - scroll.y > 0 - config.range, //页面顶部显示条件
                 yb = top < scroll.y + winSize.h + config.range, //页面底部显示条件
                 isInit = item.lazy_isInit;
-            //console.log('left',left,'top',top,'width',width,'height',height);
-
+            //console.log(item,isInit,'left',left,'top',top,'width',width,'height',height);
+            console.log(scroll)
             if (xl && xr && yt && yb && !isInit) {
                 temp.push(item);
             };

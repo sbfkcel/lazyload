@@ -70,6 +70,7 @@ lazy.tips = (o)=>{
     if(schedule === 1 && obj.lazy_isEchoTip){
         obj.parentNode.removeChild(obj.lazy_otip);
         obj.parentNode.removeChild(obj.lazy_otipText); 
+        obj.lazy_isEchoTip = undefined;
     };
 };
 
