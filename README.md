@@ -4,7 +4,7 @@
 - Compatible with IE7 + browser.
 - Allow custom loading style.
 
-## use
+## Use
 
 2.1 Html
 
@@ -29,10 +29,10 @@
 
 or
 ```javascript
-let Lazyload = require('./dist/Lazyload');
+let Lazyload = require('./dist/Lazyload.js');
 ```
 
-2.3 initialization
+2.3 Initialization
 ```javascript
 //Get elements
 var eList = [];
@@ -45,14 +45,23 @@ var lazy = new Lazyload({
     range:200           //Extra range
 });
 
+// //custom tips
+// lazy.tips = function(){
+//     var e = obj.o,                    //element
+//         schedule = obj.schedule;      //load schedule
+//     console.log(e,schedule);
+// };
+
 //Init
 lazy.init();
 ```
 
+
+
 ## Demo
 
-- 
-- 
+- [Lazyload Demo - default](https://sbfkcel.github.io/lazyload/)
+- [Lazyload Demo - custom tips](https://sbfkcel.github.io/lazyload/)
 
 ## License
 MIT
