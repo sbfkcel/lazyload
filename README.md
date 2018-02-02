@@ -46,7 +46,7 @@ var lazy = new Lazyload({
 });
 
 // //custom tips
-// lazy.tips = function(){
+// lazy.tips = function(obj){
 //     var e = obj.o,                    //element
 //         schedule = obj.schedule;      //load schedule
 //     console.log(e,schedule);
