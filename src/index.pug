@@ -5,14 +5,14 @@ block link
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Courgette|Alfa+Slab+One")
     link(rel="stylesheet", href="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css")
 block body
-    h1 Lazyload Demo (default)
+    h1 Lazyload Demo - default
     div.depict!=depict
 
     h2 Code
-    pre(class="brush:html") #{code1.html}
-    pre(class="brush:js") #{code1.js}
+    pre(class="brush:html") #{code.html}
+    pre(class="brush:js") #{code.js}
 
-    h2 Demo (Default)
+    h2 Demo
     div.main
         - for(var i in imgList0)
             div.imgBox
@@ -20,7 +20,7 @@ block body
         - for(var i in imgList1)
             div.imgBox
                 div.imgBg(data-src=imgList1[i],data-cover=coverList1[i])
-    a(hef=github).forkme
+    a(href=github,title='Forkme').forkme
         img(src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67")
 
 block script

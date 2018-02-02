@@ -7,30 +7,6 @@ module.exports = {
     title:'Lazyload Demo',
     depict:`Loaded images of lazy loading components.<br/>Compatible with IE7 + browser.<br/>Allow custom loading style.`,
     github:'https://sbfkcel.github.io/lazyload/',
-    code1:{
-        html:`
-<!--html-->
-<img class="img" data-src="http://xxx/img1.jpg" data-cover="http://xxx/img1-cover.jpg">
-<img class="img" data-src="http://xxx/img2.jpg" data-cover="http://xxx/img2-cover.jpg">
-<img class="img" data-src="http://xxx/img3.jpg" data-cover="http://xxx/img3-cover.jpg">
-
-<!--and-->
-<div class="imgBg" data-src="http://xxx/img4.jpg" data-cover="http://xxx/img4-cover.jpg"></div>
-<div class="imgBg" data-src="http://xxx/img5.jpg" data-cover="http://xxx/img5-cover.jpg"></div>
-<div class="imgBg" data-src="http://xxx/img6.jpg" data-cover="http://xxx/img6-cover.jpg"></div>`,
-        js:`
-//javascript
-var eList = [];
-o.push.apply(o, document.getElementsByClassName('img'));
-o.push.apply(o, document.getElementsByClassName('imgBg'));
-
-var lazy = new Lazyload({
-    obj:eList,          //elements
-    range:200         //Extra range
-});
-
-lazy.init();`
-    },
     imgList0:[
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621687.jpg",
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621683.jpg",
