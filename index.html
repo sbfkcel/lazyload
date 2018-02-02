@@ -7,7 +7,7 @@
     <!--360默认极速模式-->
     <meta name="renderer" content="webkit">
     <title>Lazyload Demo</title>
-    <meta name="signature" content="Project:lazyload, Create:单炒饭 2018.01.23 19:40, Update:单炒饭 2018.02.02 15:01">
+    <meta name="signature" content="Project:lazyload, Create:单炒饭 2018.01.23 19:40, Update:单炒饭 2018.02.02 15:35">
     <meta name="keywords">
     <meta name="description">
     <!--link(rel='shortcut icon', href='./images/favicon.ico')-->
@@ -33,8 +33,8 @@
     <pre class="brush:js">
 //javascript
 var eList = [];
-o.push.apply(o, document.getElementsByClassName('img'));
-o.push.apply(o, document.getElementsByClassName('imgBg'));
+eList.push.apply(eList, document.getElementsByClassName('img'));
+eList.push.apply(eList, document.getElementsByClassName('imgBg'));
 
 var lazy = new Lazyload({
     obj:eList,          //elements
