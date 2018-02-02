@@ -8,7 +8,7 @@ let lazy = new Lazyload({
 });
 
 //自定义提示
-lazy.tip = (o)=>{
+lazy.tips = (o)=>{
     let obj = o.o,
         schedule = o.schedule;
 

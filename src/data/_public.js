@@ -6,6 +6,7 @@ module.exports = {
     },
     title:'Lazyload Demo',
     depict:`Loaded images of lazy loading components.<br/>Compatible with IE7 + browser.<br/>Allow custom loading style.`,
+    github:'https://sbfkcel.github.io/lazyload/',
     code1:{
         html:`
 <!--html-->

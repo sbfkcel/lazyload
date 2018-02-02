@@ -95,7 +95,7 @@ export default class Lazyload {
                     let item = oL[i];
                     item.completedPercentage = o;
                     o.o = item;
-                    _ts.tip(o);
+                    _ts.tips(o);
                 };
             };
 
@@ -310,7 +310,7 @@ export default class Lazyload {
      * 默认的提示方法
      * @param obj --
      */
-    tip(obj) {
+    tips(obj) {
         let schedule = parseInt(obj.schedule * 100) + '%',
             o = obj.o;
 
