@@ -1,0 +1,133 @@
+@charset "utf-8";
+@mixin global-reset {
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    @include reset-box-model;
+    @include reset-font;
+  }
+  html {
+    @include reset-body;
+  }
+  body {
+    font-size:50px;
+  }
+  ol,ul {
+    @include reset-list-style;
+  }
+  table {
+    @include reset-table;
+  }
+  caption,th,td {
+    @include reset-table-cell;
+  }
+  q,blockquote {
+    @include reset-quotation;
+  }
+  a img {
+    @include reset-image-anchor-border;
+  }
+  @include reset-html5;
+}
+
+@mixin nested-reset {
+  div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    @include reset-box-model;
+    @include reset-font;
+  }
+  table {
+    @include reset-table;
+  }
+  caption,th,td {
+    @include reset-table-cell;
+  }
+  q,blockquote {
+    @include reset-quotation;
+  }
+  a img {
+    @include reset-image-anchor-border;
+  }
+}
+
+// 重置元素的间距及边距
+@mixin reset-box-model {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+// 重置字体和垂直对齐
+@mixin reset-font {
+  //font: inherit;
+  font-size: 100%;
+  font-family: -apple-system, Tahoma, "Microsoft YaHei", "WenQuanYi Micro Hei", "PingFang SC", Helvetica, arial;
+  vertical-align: baseline;
+}
+
+// 重置焦点轮郭
+@mixin reset-focus {
+  outline: 0;
+}
+
+// 重置页面样式
+@mixin reset-body {
+  font-size: 100px;
+  line-height: 1;
+}
+
+// 重置列表样式
+@mixin reset-list-style {
+  list-style: none;
+}
+
+// 重置表格样式
+@mixin reset-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// 重置表格的td、th样式
+@mixin reset-table-cell {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+// 重围引用块样式
+@mixin reset-quotation {
+  quotes: none;
+  &:before,&:after {
+    content: "";
+    content: none;
+  }
+}
+
+// 重置边框
+@mixin reset-image-anchor-border {
+  border: none;
+}
+
+// html5块元素重置
+@mixin reset-html5 {
+  #{elements-of-type(html5-block)} {
+    display: block;
+  }
+}
+
+// 内链和块元素样式重置，根据标签的不同类型来处理
+@mixin reset-display($selector: "", $important: false) {
+  #{append-selector(elements-of-type("inline"), $selector)} {
+    @if $important {
+      display: inline !important;
+    }
+    @else {
+      display: inline;
+    }
+  }
+  #{append-selector(elements-of-type("block"), $selector)} {
+    @if $important {
+      display: block !important;
+    }
+    @else {
+      display: block;
+    }
+  }
+}

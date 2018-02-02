@@ -1,0 +1,46 @@
+mixin metaMobile
+	//适应移动端页面
+	meta(name='viewport',content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+
+	//移动端全屏兼容，针对一些不支持viewport浏览器，例如黑莓
+	meta(name='HandheldFriendly',content='true')
+
+	//微软老浏览器
+	meta(name='MobileOptimized',content='320')
+
+	//去除window Phone点击高光
+	meta(name='msapplication-tap-highlight',content='no')
+
+	//safari默认控件设置，会隐藏ios工具栏和菜单栏
+	meta(name='apple-mobile-web-app-capable',content='yes')
+
+	//iOS WebApp模式下的顶部信号栏颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）
+	meta(name='apple-mobile-web-app-status-bar-style',content='black-translucent')
+
+	//忽略页面中的电话号码数字和邮件链接
+	meta(name='format-detection',content='telephone=no, email=no')
+
+mixin metaFullScreen
+	//uc横竖屏设置
+	meta(name='screen-orientation',content='portrait')
+
+	//QQ横竖屏设置
+	meta(name='x5-orientation',content='portrait')
+
+	//uc强制全屏
+	meta(name='full-screen',content='yes')
+
+	//QQ强制全屏
+	meta(name='x5-fullscreen',content='yes')
+
+	//uc应用模式
+	meta(name='browsermode',content='application')
+
+	//QQ应用模式
+	meta(name='x5-page-mode',content='app')
+
+mixin linkAppleTouchIcon
+	link(rel='apple-touch-icon', sizes='57x57' href='./images/icon/57.png')
+	link(rel='apple-touch-icon', sizes='72x72' href='./images/icon/72.png')
+	link(rel='apple-touch-icon', sizes='114x114' href='./images/icon/114.png')
+	link(rel='apple-touch-icon', sizes='144x144' href='./images/icon/144.png')

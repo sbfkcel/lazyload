@@ -1,0 +1,6 @@
+*.js linguist-language=javascript  
+*.css linguist-language=javascript  
+*.html linguist-language=javascript
+*.pug linguist-language=javascript
+*.es6 linguist-language=javascript
+*.es linguist-language=javascript

@@ -1,0 +1,59 @@
+﻿@charset "utf-8";
+
+//inline-block
+@mixin inline-block(){
+	display:inline-block; _zoom:1; *zoom:1; _display:inline; *display:inline;
+}
+
+//大小设置
+@mixin size($size){
+	width:$size; height:$size;
+}
+
+//行高设置
+@mixin hl($val){
+	height:$val; line-height:$val;
+}
+
+//水平翻转&垂直翻转
+@mixin flip($mode) {
+	@if $mode == x {
+		-moz-transform:scaleX(-1);
+		-webkit-transform:scaleX(-1);
+		-o-transform:scaleX(-1);
+		transform:scaleX(-1);
+		/*IE*/
+		filter:FlipH;
+	} @else if $mode == y {
+		-moz-transform:scaleY(-1);
+		-webkit-transform:scaleY(-1);
+		-o-transform:scaleY(-1);
+		transform:scaleY(-1);
+		/*IE*/
+		filter:FlipV;
+	}
+}
+
+//清除浮动
+@mixin clearfix {
+	zoom:1;
+	&:after {
+		content: "."; display: block; height: 0; clear: both; visibility: hidden;
+	};
+}
+
+//箭头
+@mixin arrow($color:black,$size:4px,$mode:b){
+	width:0px; height:0px; font-size:0; overflow:hidden; border-width:$size; vertical-align:middle;
+	$style:null;
+	@if $mode == t {
+		$style:transparent transparent $color transparent; border-style:dashed dashed solid dashed;
+	} @else if $mode == r {
+		$style:transparent transparent transparent $color; border-style:dashed dashed dashed solid;
+	} @else if $mode == b {
+		$style:$color transparent transparent; border-style:solid dashed dashed dashed;
+	} @else if $mode == l {
+		$style:transparent $color transparent transparent; border-style:dashed solid dashed dashed;
+	}
+	border-color:$style;
+}

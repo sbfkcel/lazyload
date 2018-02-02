@@ -1,0 +1,39 @@
+extends _defaultPage
+
+block link
+    link(rel="stylesheet", href="./css/style.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Courgette|Alfa+Slab+One")
+    link(rel="stylesheet", href="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css")
+block body
+    h1 Lazyload Demo
+    div.depict!=depict
+
+    h2 Code
+    pre(class="brush:html") #{code1.html}
+    pre(class="brush:js") #{code1.js}
+
+    h2 Demo
+    div.main
+        - for(var i in imgList0)
+            div.imgBox
+                img.img(data-src=imgList0[i],data-cover=coverList0[i])
+        - for(var i in imgList1)
+            div.imgBox
+                div.imgBg(data-src=imgList1[i],data-cover=coverList1[i])
+    a(hef="").forkme
+        img(src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67")
+
+block script
+    script(src="https://cdn.staticfile.org/sizzle/2.3.3/sizzle.min.js")
+    script(src="./js/lazyload.js")
+    script(src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shCore.min.js")
+    script(src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js")
+    script(src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js")
+    script.
+        SyntaxHighlighter.defaults['gutter'] = false;
+        SyntaxHighlighter.defaults['class-name'] = 'code';
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+
+    script(src="./js/demo.js")
+ 

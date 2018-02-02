@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+
+//rem单位转换
+@function rem($px){
+    @return $px / 2 / 50 + 0rem;
+};
+
+
+//=========================
+//图片引用信息获取
+//=========================
+
+//项目图片数据
+@import "../imagesData";
+
+//根据路径获取图片宽度
+@function image-width($imgPath,$unit:'number'){
+    $imgInfo:map-get($_imagesData,$imgPath);
+    @if $imgInfo == null {
+        @debug 'Image" ' + $imgPath + ' "file does not exist';
+    };
+
+    $result:map-get($imgInfo,width);
+    @if $unit == 'px' {
+        $result:$result + 0px;
+    } @else if $unit == 'rem' {
+        $result:rem($result);
+    };
+    @return $result;
+};
+
+//根据图片路径获取图片高度
+@function image-height($imgPath,$unit:'number'){
+    $imgInfo:map-get($_imagesData,$imgPath);
+    @if $imgInfo == null {
+        @debug 'Image" ' + $imgPath + ' "file does not exist';
+    };
+
+    $result:map-get($imgInfo,height);
+    @if $unit == 'px' {
+        $result:$result + 0px;
+    } @else if $unit == 'rem' {
+        $result:rem($result);
+    };
+    @return $result;
+};
+
+//根据图片路径获取图片base64信息
+@function inline-image($imgPath){
+    $imgInfo:map-get($_imagesData,$imgPath);
+    @if $imgInfo == null {
+        @debug 'Image" ' + $imgPath + ' "file does not exist';
+    };
+    
+    $base64:map-get($imgInfo,base64);
+    $imgType:map-get($imgInfo,type);
+    @if $imgType == 'jpg' {
+        $imgType:'jpeg'
+    };
+    @return url('data:image/'+$imgType+';base64,'+$base64);
+};

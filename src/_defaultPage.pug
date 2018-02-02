@@ -1,0 +1,32 @@
+html
+    include ./_fwsMixin
+    head
+        meta(charset='UTF-8')
+        //设置浏览器渲染模式优先为最新
+        meta(http-equiv='X-UA-Compatible',content='IE=edge,chrome=1')
+        //360默认极速模式
+        meta(name='renderer',content='webkit')
+        
+        if config.isMobile
+            //移动端头部兼容
+            +metaMobile
+        if config.isFullScreen
+            +metaFullScreen
+
+        title #{title}
+        meta(name='keywords',content=seo_key)
+        meta(name='description',content=seo_desc)
+        
+        //link(rel='shortcut icon', href='./images/favicon.ico')
+        link(rel='stylesheet', href='./css/public.css')
+        block link
+
+        if config.showIosIcon
+            //iOS图标设置
+            +linkAppleTouchIcon
+    body
+        block body
+
+        //页面js脚本
+        block script
+        

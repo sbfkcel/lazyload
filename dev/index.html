@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!--设置浏览器渲染模式优先为最新-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--360默认极速模式-->
+    <meta name="renderer" content="webkit">
+    <title>Lazyload Demo</title>
+    <meta name="keywords">
+    <meta name="description">
+    <!--link(rel='shortcut icon', href='./images/favicon.ico')-->
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Alfa+Slab+One">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css">
+  </head>
+  <body>
+    <h1>Lazyload Demo</h1>
+    <div class="depict">Loaded images of lazy loading components.<br/>Compatible with IE7 + browser.<br/>Allow custom loading style.</div>
+    <h2>Code</h2>
+    <pre class="brush:html">
+&lt;!--html--&gt;
+&lt;img class=&quot;img&quot; data-src=&quot;http://xxx/img1.jpg&quot; data-cover=&quot;http://xxx/img1-cover.jpg&quot;&gt;
+&lt;img class=&quot;img&quot; data-src=&quot;http://xxx/img2.jpg&quot; data-cover=&quot;http://xxx/img2-cover.jpg&quot;&gt;
+&lt;img class=&quot;img&quot; data-src=&quot;http://xxx/img3.jpg&quot; data-cover=&quot;http://xxx/img3-cover.jpg&quot;&gt;
+
+&lt;!--and--&gt;
+&lt;div class=&quot;imgBg&quot; data-src=&quot;http://xxx/img4.jpg&quot; data-cover=&quot;http://xxx/img4-cover.jpg&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;imgBg&quot; data-src=&quot;http://xxx/img5.jpg&quot; data-cover=&quot;http://xxx/img5-cover.jpg&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;imgBg&quot; data-src=&quot;http://xxx/img6.jpg&quot; data-cover=&quot;http://xxx/img6-cover.jpg&quot;&gt;&lt;/div&gt;</pre>
+    <pre class="brush:js">
+//javascript
+var eList = [];
+o.push.apply(o, document.getElementsByClassName('img'));
+o.push.apply(o, document.getElementsByClassName('imgBg'));
+
+var lazy = new Lazyload({
+    obj:eList,          //elements
+    range:200         //Extra range
+});
+
+lazy.init();</pre>
+    <h2>Demo</h2>
+    <div class="main">
+      <div class="imgBox"><img class="img" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621687.jpg" data-cover=""></div>
+      <div class="imgBox"><img class="img" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621683.jpg" data-cover=""></div>
+      <div class="imgBox"><img class="img" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621681.jpg" data-cover=""></div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621700.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="http://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/VaNtWRbmebdlBCq.gif" data-cover="http://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/JEOMkQbmebdirhB.jpg!a-3-540x.jpg"></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621687.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621683.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621681.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621678.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621675.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621672.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621670.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621665.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621663.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621658.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-608492.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-610745.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-614179.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-609432.jpg" data-cover=""></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-614476.jpg"></div>
+      </div>
+      <div class="imgBox">
+        <div class="imgBg" data-src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-610513.jpg"></div>
+      </div>
+    </div><a class="forkme" hef=""><img src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"></a>
+    <!--页面js脚本-->
+    <script src="https://cdn.staticfile.org/sizzle/2.3.3/sizzle.min.js"></script>
+    <script src="./js/lazyload.js"></script>
+    <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+    <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+    <script>
+      SyntaxHighlighter.defaults['gutter'] = false;
+      SyntaxHighlighter.defaults['class-name'] = 'code';
+      SyntaxHighlighter.defaults['toolbar'] = false;
+      SyntaxHighlighter.all();
+      
+    </script>
+    <script src="./js/demo.js"></script>
+  </body>
+</html>
