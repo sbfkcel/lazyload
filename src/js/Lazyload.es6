@@ -55,7 +55,6 @@ export default class Lazyload {
         (task = () => {
             //得到当前屏幕区域的需要更新图片列表
             let eList = _ts.getShowList();
-            console.log(eList)
 
             //遍历加载图片
             for(let i=0,len=eList.length; i<len; i++){
@@ -299,7 +298,7 @@ export default class Lazyload {
                 yb = top < scroll.y + winSize.h + config.range, //页面底部显示条件
                 isInit = item.lazy_isInit;
             //console.log(item,isInit,'left',left,'top',top,'width',width,'height',height);
-            console.log(scroll)
+            
             if (xl && xr && yt && yb && !isInit) {
                 temp.push(item);
             };
