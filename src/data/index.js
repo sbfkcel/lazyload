@@ -18,8 +18,8 @@ let publicPath = path.join(__dirname,'_public'),        //公共数据路径
         js:`
 //javascript
 var eList = [];
-o.push.apply(o, document.getElementsByClassName('img'));
-o.push.apply(o, document.getElementsByClassName('imgBg'));
+eList.push.apply(eList, document.getElementsByClassName('img'));
+eList.push.apply(eList, document.getElementsByClassName('imgBg'));
 
 var lazy = new Lazyload({
     obj:eList,          //elements

@@ -36,8 +36,8 @@ let Lazyload = require('./dist/Lazyload.js');
 ```javascript
 //Get elements
 var eList = [];
-o.push.apply(o, document.getElementsByClassName('img'));
-o.push.apply(o, document.getElementsByClassName('imgBg'));
+eList.push.apply(eList, document.getElementsByClassName('img'));
+eList.push.apply(eList, document.getElementsByClassName('imgBg'));
 
 //Create Lazy
 var lazy = new Lazyload({
