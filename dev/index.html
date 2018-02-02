@@ -103,7 +103,17 @@ lazy.init();</pre>
     </div><a class="forkme" hef=""><img src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67"></a>
     <!--页面js脚本-->
     <script src="https://cdn.staticfile.org/sizzle/2.3.3/sizzle.min.js"></script>
-    <script src="./js/lazyload.js"></script>
+    <script src="./js/Lazyload.js"></script>
+    <script>
+      var o = [];
+      o.push.apply(o, Sizzle('.img'));
+      o.push.apply(o, Sizzle('.imgBg'));
+      var lazy = new Lazyload({
+          obj: o,
+          range: 100 //容差范围
+      });
+      lazy.init();
+    </script>
     <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
     <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
     <script src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
@@ -112,8 +122,6 @@ lazy.init();</pre>
       SyntaxHighlighter.defaults['class-name'] = 'code';
       SyntaxHighlighter.defaults['toolbar'] = false;
       SyntaxHighlighter.all();
-      
     </script>
-    <script src="./js/demo.js"></script>
   </body>
 </html>

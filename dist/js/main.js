@@ -1,2 +1,0 @@
-/*! Project:lazyload, Create:单炒饭 2018.01.23 19:40, Update:单炒饭 2018.02.02 12:45 */ 
-!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):"function"==typeof define&&(define.cmd||define.hjs)?define(function(require,exports,e){e.exports=n()}):n()}(0,function(){"use strict"});
