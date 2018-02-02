@@ -6,7 +6,7 @@ module.exports = {
     },
     title:'Lazyload Demo',
     depict:`Loaded images of lazy loading components.<br/>Compatible with IE7 + browser.<br/>Allow custom loading style.`,
-    github:'https://sbfkcel.github.io/lazyload/',
+    github:'https://github.com/sbfkcel/lazyload',
     imgList0:[
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621687.jpg",
         "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-621683.jpg",
