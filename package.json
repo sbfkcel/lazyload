@@ -1,6 +1,6 @@
 {
   "name": "image-lazyload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loaded images of lazy loading components. Compatible with IE7 + browser. ",
   "main": "dist/js/Lazyload.js",
   "scripts": {

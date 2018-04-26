@@ -1,5 +1,7 @@
 # Lazyload
 
+[![npm version](https://badge.fury.io/js/image-lazyload.svg)](https://badge.fury.io/js/image-lazyload)
+
 - Loaded images of lazy loading components.
 - Compatible with IE7 + browser.
 - Allow custom loading style.
@@ -56,6 +58,11 @@ var lazy = new Lazyload({
 lazy.init();
 ```
 
+## Npm
+
+```bash
+npm install image-lazyload
+```
 
 
 ## Demo
