@@ -1,0 +1,25 @@
+{
+  "name": "image-lazyload",
+  "version": "1.0.0",
+  "description": "Loaded images of lazy loading components. Compatible with IE7 + browser. ",
+  "main": "dist/js/Lazyload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbfkcel/lazyload.git"
+  },
+  "keywords": [
+    "lazyload",
+    "imagesLoad",
+    "imgLoad",
+    "webLoad"
+  ],
+  "author": "sbfkcel@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbfkcel/lazyload/issues"
+  },
+  "homepage": "https://github.com/sbfkcel/lazyload#readme"
+}
