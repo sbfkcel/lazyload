@@ -68,7 +68,7 @@ npm install image-lazyload
 ## Demo
 
 - [Lazyload Demo - default](https://sbfkcel.github.io/lazyload/)
-- [Lazyload Demo - custom tips](https://sbfkcel.github.io/lazyload/)
+- [Lazyload Demo - custom tips](https://sbfkcel.github.io/lazyload/demo.html)
 
 ## License
 MIT
