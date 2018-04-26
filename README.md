@@ -64,6 +64,18 @@ lazy.init();
 npm install image-lazyload
 ```
 
+```javascript
+import Lazyload from 'image-lazyload'
+
+let imgs = document.getElementsByClassName('img'),
+    lazy  = new Lazyload({
+        obj:imgs,
+        range:200
+    });
+
+lazy.init();
+```
+
 
 ## Demo
 
